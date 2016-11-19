@@ -12,6 +12,10 @@ fileprivate let EmoticonCell = "EmoticonCell"
 
 class EmoticonController: UIViewController {
     
+    //定义属性
+    var emoticonCallback:(_ emoticon : Emoticon) -> ()
+    
+    
     //MARK:懒加载属性
     fileprivate lazy var collectionView:UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: EmoticonCollectionViewLayout())
     fileprivate lazy var toolBar:UIToolbar = UIToolbar()
@@ -21,6 +25,17 @@ class EmoticonController: UIViewController {
     fileprivate var manager = EmoticonManager()
     
 
+    //MARK:自定义属性
+    init(emoticonCallback:@escaping (_ emoticon : Emoticon) -> ()) {
+        self.emoticonCallback = emoticonCallback
+        
+        super.init(nibName:nil,bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
