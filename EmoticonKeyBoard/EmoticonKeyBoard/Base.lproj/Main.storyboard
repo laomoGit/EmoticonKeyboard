@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A57-4c-8Lr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9BZ-sQ-QLc">
+            <objects>
+                <navigationController id="A57-4c-8Lr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b3p-Mk-Ss1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="btX-4v-coj" kind="relationship" relationship="rootViewController" id="F0D-Uo-lXH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YuE-oj-D5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="222"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mgx-D6-LXm">
+            <objects>
+                <viewController id="btX-4v-coj" customClass="ViewController" customModule="EmoticonKeyBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTf-LB-zJQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aiC-6l-fAu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aeB-GC-pYu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入文字" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UOY-R7-xwI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UOY-R7-xwI" secondAttribute="trailing" id="7iO-eF-omm"/>
+                            <constraint firstItem="aiC-6l-fAu" firstAttribute="top" secondItem="UOY-R7-xwI" secondAttribute="bottom" id="et1-eE-LKo"/>
+                            <constraint firstItem="UOY-R7-xwI" firstAttribute="top" secondItem="WTf-LB-zJQ" secondAttribute="bottom" id="pdD-ye-0Xm"/>
+                            <constraint firstItem="UOY-R7-xwI" firstAttribute="leading" secondItem="aeB-GC-pYu" secondAttribute="leading" id="uYa-pS-RjE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yB6-HY-NRs"/>
+                    <connections>
+                        <outlet property="textView" destination="UOY-R7-xwI" id="OpT-hi-fC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6W-Gc-NyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="216"/>
+        </scene>
+    </scenes>
+</document>
