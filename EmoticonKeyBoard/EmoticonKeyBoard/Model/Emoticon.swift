@@ -41,6 +41,7 @@ class Emoticon: NSObject {
             }
             
             self.pngPath = Bundle.main.bundlePath + "/Emoticons.bundle/" + png
+            print("pngPath : \(pngPath)")
         }
         
     }
@@ -55,17 +56,18 @@ class Emoticon: NSObject {
     init(dict :[String : String]) {
         super.init()
         
-        setValuesForKeys(dict)
+        print("生成表情：\(dict.description)")
+        self.setValuesForKeys(dict)
         
     }
     
-    override func setValue(_ value: Any?, forKey key: String) {
+
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
-    
     override var description: String{
         
         
-        return dictionaryWithValues(forKeys: ["code","png","chs"]).description
+        return dictionaryWithValues(forKeys: ["emojiCode","pngPath","chs"]).description
     }
 }

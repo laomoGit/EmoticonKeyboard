@@ -17,6 +17,9 @@ class EmoticonController: UIViewController {
     fileprivate lazy var toolBar:UIToolbar = UIToolbar()
     
     
+    //表情包管理
+    fileprivate var manager = EmoticonManager()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +41,7 @@ extension EmoticonController{
         //添加子控件
         self.view.addSubview(self.collectionView)
         self.view.addSubview(self.toolBar)
-        self.collectionView.backgroundColor = UIColor.purple
+        self.collectionView.backgroundColor = UIColor.orange
         self.toolBar.backgroundColor = UIColor.darkGray
         
         //设置子空间的frame
@@ -65,7 +68,7 @@ extension EmoticonController{
     ///准备工作
     fileprivate func prepareForCollectionView(){
         //创建cell
-        self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier:EmoticonCell)
+        self.collectionView.register(EmoticonViewCell.self, forCellWithReuseIdentifier:EmoticonCell)
         
         self.collectionView.dataSource = self
         
@@ -108,16 +111,31 @@ extension EmoticonController{
 //MARK:collectionView 数据源代理方法
 extension EmoticonController:UICollectionViewDataSource{
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return self.manager.packages.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 200
+        
+        let package = manager.packages[section]
+        print("表情数量:\(package.emoticons.count)")
+        
+        return package.emoticons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //创建cell 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmoticonCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmoticonCell, for: indexPath) as! EmoticonViewCell
         
         //给cell设置数据
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.black : UIColor.brown
+//        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.black : UIColor.brown
+        
+        print("indexPath.section : \(indexPath.section)")
+        let packge = self.manager.packages[indexPath.section]
+        print("packages : \(packge.emoticons.count)")
+        let emoticon = packge.emoticons[indexPath.item]
+        cell.emoticon = emoticon
+        print(emoticon.description)
         
         return cell
     }

@@ -19,6 +19,7 @@
 		42BE279F1DDFEC24004D48FE /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE279E1DDFEC24004D48FE /* Emoticon.swift */; };
 		42BE27A11DDFF151004D48FE /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE27A01DDFF151004D48FE /* EmoticonPackage.swift */; };
 		42BE27A31DDFF3BF004D48FE /* EmoticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE27A21DDFF3BF004D48FE /* EmoticonManager.swift */; };
+		42BE27A51DDFFDBD004D48FE /* EmoticonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE27A41DDFFDBD004D48FE /* EmoticonViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		42BE279E1DDFEC24004D48FE /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoticon.swift; path = Model/Emoticon.swift; sourceTree = "<group>"; };
 		42BE27A01DDFF151004D48FE /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmoticonPackage.swift; path = Model/EmoticonPackage.swift; sourceTree = "<group>"; };
 		42BE27A21DDFF3BF004D48FE /* EmoticonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmoticonManager.swift; path = Model/EmoticonManager.swift; sourceTree = "<group>"; };
+		42BE27A41DDFFDBD004D48FE /* EmoticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				42BE279D1DDFE9CB004D48FE /* Model */,
 				42BE279B1DDFE633004D48FE /* Emoticons.bundle */,
 				42467EE31DDEFE0C008EE35E /* EmoticonController.swift */,
+				42BE27A41DDFFDBD004D48FE /* EmoticonViewCell.swift */,
 			);
 			name = Emoticon;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42BE27A51DDFFDBD004D48FE /* EmoticonViewCell.swift in Sources */,
 				42467EB71DDEF54B008EE35E /* ViewController.swift in Sources */,
 				42467EB51DDEF54B008EE35E /* AppDelegate.swift in Sources */,
 				42BE27A11DDFF151004D48FE /* EmoticonPackage.swift in Sources */,
