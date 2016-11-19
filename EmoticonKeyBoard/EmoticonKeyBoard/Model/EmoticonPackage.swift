@@ -60,7 +60,7 @@ class EmoticonPackage: NSObject {
         }
         
         for _ in count..<20{
-            self.emoticons.append(Emoticon(isRecently:true))
+            self.emoticons.append(Emoticon(isEmpty:true))
             
         }
         

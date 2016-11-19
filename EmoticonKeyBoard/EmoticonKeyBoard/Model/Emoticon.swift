@@ -53,7 +53,7 @@ class Emoticon: NSObject {
     var emojiCode :String?
     
     var isRemove:Bool = false//删除
-    var isRecently:Bool = false //是否空白
+    var isEmpty:Bool = false //是否空白
     
     //构造函数
     init(dict :[String : String]) {
@@ -69,8 +69,8 @@ class Emoticon: NSObject {
         self.isRemove = isRemove
     }
     
-    init(isRecently:Bool) {
-        self.isRecently = isRecently
+    init(isEmpty:Bool) {
+        self.isEmpty = isEmpty
     }
 
     override func setValue(_ value: Any?, forUndefinedKey key: String) {

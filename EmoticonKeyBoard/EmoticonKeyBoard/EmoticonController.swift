@@ -71,6 +71,7 @@ extension EmoticonController{
         self.collectionView.register(EmoticonViewCell.self, forCellWithReuseIdentifier:EmoticonCell)
         
         self.collectionView.dataSource = self
+        self.collectionView.delegate = self
         
     }
     
@@ -117,7 +118,7 @@ extension EmoticonController{
 
 
 //MARK:collectionView 数据源代理方法
-extension EmoticonController:UICollectionViewDataSource{
+extension EmoticonController:UICollectionViewDataSource,UICollectionViewDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.manager.packages.count
@@ -147,6 +148,43 @@ extension EmoticonController:UICollectionViewDataSource{
         
         return cell
     }
+    
+    
+    ///代理方法
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //获取点击的表情
+        let package = self.manager.packages[indexPath.section]
+        let emoticon = package.emoticons[indexPath.item]
+        
+        //将点击过的表情插入最近的分组
+        self.insertRecentlyEmoticon(emoticon: emoticon)
+    }
+    
+    ///插入最近分组中
+    fileprivate func insertRecentlyEmoticon(emoticon:Emoticon){
+        //如果是空白表情或者删除按钮，不需要插入
+        if emoticon.isRemove || emoticon.isEmpty {
+            return
+        }
+        
+        //删除一个表情
+        if (manager.packages.first?.emoticons.contains(emoticon))!{
+            //原来已有该表情
+            let index = (self.manager.packages.first?.emoticons.index(of: emoticon))!
+            self.manager.packages.first?.emoticons.remove(at: index)
+        }else{
+            
+            //原来没有该表情
+            self.manager.packages.first?.emoticons.remove(at: 19)
+        }
+        
+        //将emoticon插入最近分组中
+        self.manager.packages.first?.emoticons.insert(emoticon, at: 0)
+        
+        
+    }
+    
 }
 
 
