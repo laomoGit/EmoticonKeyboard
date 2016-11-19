@@ -11,9 +11,45 @@ import UIKit
 class Emoticon: NSObject {
     
     //MARK:定义属性
-    var code :String?       //emoji的code
-    var png :String?        //普通表情对应的图片名称
+    var code :String? {      //emoji的code
+        didSet{
+            guard let code = code else{
+                return
+            }
+            
+            //创建扫描器
+            let scanner = Scanner(string:code)
+            
+            //调用方法，扫描code的中的值
+            var value :UInt32 = 0
+            scanner.scanHexInt32(&value)
+            
+            //将value 转成字符
+            let c = Character(UnicodeScalar(value)!)
+            
+            //将字符转成字符串
+            self.emojiCode = String(c)
+        }
+        
+    }
+    
+    
+    var png :String?{        //普通表情对应的图片名称
+        didSet{
+            guard let png = png else{
+                return
+            }
+            
+            self.pngPath = Bundle.main.bundlePath + "/Emoticons.bundle/" + png
+        }
+        
+    }
     var chs :String?        //普通表情对应的文字
+    
+    
+    //MARK:数据处理
+    var pngPath :String?
+    var emojiCode :String?
     
     //构造函数
     init(dict :[String : String]) {

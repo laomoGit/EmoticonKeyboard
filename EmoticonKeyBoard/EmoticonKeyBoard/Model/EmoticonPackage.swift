@@ -25,7 +25,12 @@ class EmoticonPackage: NSObject {
         let array = NSArray(contentsOfFile: plistPath)! as! [[String : String]]
         
         //遍历数组
-        for dict in array {
+        for var dict in array {
+            if let png = dict["png"] {
+                dict["png"] = id + "/" + png
+                print("表情路径：\(dict["png"])")
+            }
+            
             self.emoticons.append(Emoticon(dict: dict))
         }
     }
