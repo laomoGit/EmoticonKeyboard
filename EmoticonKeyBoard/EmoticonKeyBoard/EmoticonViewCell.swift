@@ -23,6 +23,11 @@ class EmoticonViewCell: UICollectionViewCell {
             self.emoticonBtn.setImage(UIImage(contentsOfFile:emoticon.pngPath ?? ""), for: .normal)
             self.emoticonBtn.setTitle(emoticon.emojiCode, for: .normal)
             
+            
+            //设置删除按钮
+            if emoticon.isRemove{
+                self.emoticonBtn.setImage(UIImage(named:"compose_emotion_delete"), for: .normal)
+            }
         }
     }
     

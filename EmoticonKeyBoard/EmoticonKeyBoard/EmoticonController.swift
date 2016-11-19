@@ -102,7 +102,15 @@ extension EmoticonController{
     }
     
     @objc private func itemClick(item : UIBarButtonItem) {
-        print(item.tag)
+        //获取点击的item 的tag
+        let tag = item.tag
+        print("当前item：\(item.tag)")
+        
+        //根据tag获取到当前组
+        let indexPath = IndexPath(item: 0, section: tag)
+        
+        //滚到对应的位置
+        self.collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
     }
     
 }

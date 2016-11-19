@@ -52,6 +52,8 @@ class Emoticon: NSObject {
     var pngPath :String?
     var emojiCode :String?
     
+    var isRemove:Bool = false//删除
+    
     //构造函数
     init(dict :[String : String]) {
         super.init()
@@ -59,6 +61,11 @@ class Emoticon: NSObject {
         print("生成表情：\(dict.description)")
         self.setValuesForKeys(dict)
         
+    }
+    
+    
+    init(isRemove:Bool) {
+        self.isRemove = isRemove
     }
     
 
