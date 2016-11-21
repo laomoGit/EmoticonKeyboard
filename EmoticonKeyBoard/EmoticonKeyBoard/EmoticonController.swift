@@ -32,6 +32,8 @@ class EmoticonController: UIViewController {
         super.init(nibName:nil,bundle: nil)
     }
     
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -168,12 +170,18 @@ extension EmoticonController:UICollectionViewDataSource,UICollectionViewDelegate
     ///代理方法
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //获取点击的表情
+        //1.获取点击的表情
         let package = self.manager.packages[indexPath.section]
         let emoticon = package.emoticons[indexPath.item]
         
-        //将点击过的表情插入最近的分组
+        //2.将点击过的表情插入最近的分组
         self.insertRecentlyEmoticon(emoticon: emoticon)
+        
+        // 3.将表情回调给外界控制器
+        print("点击的表情：\(emoticon)")
+        
+        
+        emoticonCallback(emoticon)
     }
     
     ///插入最近分组中
