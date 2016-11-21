@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421B66EB1DE2BDB0006EB858 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B66EA1DE2BDB0006EB858 /* UITextView+Extension.swift */; };
 		42467EB51DDEF54B008EE35E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467EB41DDEF54B008EE35E /* AppDelegate.swift */; };
 		42467EB71DDEF54B008EE35E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467EB61DDEF54B008EE35E /* ViewController.swift */; };
 		42467EBA1DDEF54B008EE35E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42467EB81DDEF54B008EE35E /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		421B66EA1DE2BDB0006EB858 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		42467EB11DDEF54B008EE35E /* EmoticonKeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoticonKeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42467EB41DDEF54B008EE35E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42467EB61DDEF54B008EE35E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				42467EE31DDEFE0C008EE35E /* EmoticonController.swift */,
 				42BE27A41DDFFDBD004D48FE /* EmoticonViewCell.swift */,
 				4283CDAB1DE29074002951BF /* EmoticonAttachment.swift */,
+				421B66EA1DE2BDB0006EB858 /* UITextView+Extension.swift */,
 			);
 			name = Emoticon;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				4283CDAC1DE29074002951BF /* EmoticonAttachment.swift in Sources */,
 				42467EB51DDEF54B008EE35E /* AppDelegate.swift in Sources */,
 				42BE27A11DDFF151004D48FE /* EmoticonPackage.swift in Sources */,
+				421B66EB1DE2BDB0006EB858 /* UITextView+Extension.swift in Sources */,
 				42BE27A31DDFF3BF004D48FE /* EmoticonManager.swift in Sources */,
 				42467EE41DDEFE0C008EE35E /* EmoticonController.swift in Sources */,
 				42BE279F1DDFEC24004D48FE /* Emoticon.swift in Sources */,
