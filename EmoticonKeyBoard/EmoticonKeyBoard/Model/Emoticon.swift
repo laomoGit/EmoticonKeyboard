@@ -52,8 +52,8 @@ class Emoticon: NSObject {
     var pngPath :String?
     var emojiCode :String?
     
-    var isRemove:Bool = false//删除
-    var isEmpty:Bool = false //是否空白
+    var isRemove:Bool = false//是否为删除按钮
+    var isEmpty:Bool = false //是否为空白
     
     //构造函数
     init(dict :[String : String]) {

@@ -52,7 +52,13 @@
                             <constraint firstItem="UOY-R7-xwI" firstAttribute="leading" secondItem="aeB-GC-pYu" secondAttribute="leading" id="uYa-pS-RjE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yB6-HY-NRs"/>
+                    <navigationItem key="navigationItem" id="yB6-HY-NRs">
+                        <barButtonItem key="rightBarButtonItem" title="发送" id="ZjX-a7-0Ue">
+                            <connections>
+                                <action selector="sendItemClick:" destination="btX-4v-coj" id="PBD-nL-c8s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textView" destination="UOY-R7-xwI" id="OpT-hi-fC7"/>
                     </connections>

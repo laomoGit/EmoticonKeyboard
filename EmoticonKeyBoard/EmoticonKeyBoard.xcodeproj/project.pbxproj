@@ -15,6 +15,7 @@
 		42467ECA1DDEF54C008EE35E /* EmoticonKeyBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467EC91DDEF54C008EE35E /* EmoticonKeyBoardTests.swift */; };
 		42467ED51DDEF54C008EE35E /* EmoticonKeyBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467ED41DDEF54C008EE35E /* EmoticonKeyBoardUITests.swift */; };
 		42467EE41DDEFE0C008EE35E /* EmoticonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467EE31DDEFE0C008EE35E /* EmoticonController.swift */; };
+		4283CDAC1DE29074002951BF /* EmoticonAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283CDAB1DE29074002951BF /* EmoticonAttachment.swift */; };
 		42BE279C1DDFE633004D48FE /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 42BE279B1DDFE633004D48FE /* Emoticons.bundle */; };
 		42BE279F1DDFEC24004D48FE /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE279E1DDFEC24004D48FE /* Emoticon.swift */; };
 		42BE27A11DDFF151004D48FE /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE27A01DDFF151004D48FE /* EmoticonPackage.swift */; };
@@ -54,6 +55,7 @@
 		42467ED41DDEF54C008EE35E /* EmoticonKeyBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonKeyBoardUITests.swift; sourceTree = "<group>"; };
 		42467ED61DDEF54C008EE35E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42467EE31DDEFE0C008EE35E /* EmoticonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonController.swift; sourceTree = "<group>"; };
+		4283CDAB1DE29074002951BF /* EmoticonAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmoticonAttachment.swift; path = Model/EmoticonAttachment.swift; sourceTree = "<group>"; };
 		42BE279B1DDFE633004D48FE /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		42BE279E1DDFEC24004D48FE /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoticon.swift; path = Model/Emoticon.swift; sourceTree = "<group>"; };
 		42BE27A01DDFF151004D48FE /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmoticonPackage.swift; path = Model/EmoticonPackage.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				42BE279B1DDFE633004D48FE /* Emoticons.bundle */,
 				42467EE31DDEFE0C008EE35E /* EmoticonController.swift */,
 				42BE27A41DDFFDBD004D48FE /* EmoticonViewCell.swift */,
+				4283CDAB1DE29074002951BF /* EmoticonAttachment.swift */,
 			);
 			name = Emoticon;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				42BE27A51DDFFDBD004D48FE /* EmoticonViewCell.swift in Sources */,
 				42467EB71DDEF54B008EE35E /* ViewController.swift in Sources */,
+				4283CDAC1DE29074002951BF /* EmoticonAttachment.swift in Sources */,
 				42467EB51DDEF54B008EE35E /* AppDelegate.swift in Sources */,
 				42BE27A11DDFF151004D48FE /* EmoticonPackage.swift in Sources */,
 				42BE27A31DDFF3BF004D48FE /* EmoticonManager.swift in Sources */,
